@@ -1,0 +1,102 @@
+nav {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.form-control {
+  position: relative;
+  width: 41vw;
+}
+
+input {
+  margin-left: 2rem;
+  color: transparent;
+}
+.cart {
+  display: flex;
+  font-size: 1.2rem;
+  /* color: white; */
+}
+.p-cart {
+  padding-top: 0.7rem;
+}
+.login {
+  display: flex;
+  /* color: aliceblue; */
+}
+
+.p-login {
+  padding-top: 0.7rem;
+}
+
+.input-search {
+  position: relative;
+}
+
+.search input {
+  position: relative;
+  font-size: 1rem;
+  padding: 0.6rem;
+  background-color: transparent;
+}
+.fa-solid {
+  position: absolute;
+  font-size: 1.4rem;
+  margin-left: 2.4rem;
+  margin-top: 0.8rem;
+  color: rgb(137, 145, 145);
+}
+
+.seller {
+  display: flex;
+}
+
+.p-seller {
+  padding-top: 0.7rem;
+}
+.seller button {
+  font-size: 1.2rem;
+  /* color: white; */
+}
+.login button {
+  font-size: 1.2rem;
+  /* color: white; */
+}
+.menu-bar {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+#checkbox {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  input {
+    display: none;
+  }
+  .fa-solid {
+    display: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+  #checkbox:checked ~ header {
+    left: 0;
+  }
+  .p-cart {
+    display: none;
+  }
+  .p-seller {
+    display: none;
+  }
+  .p-login {
+    display: none;
+  }
+  .dots {
+    display: none;
+  }
+}
