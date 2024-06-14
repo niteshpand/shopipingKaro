@@ -29,7 +29,7 @@ input {
 }
 
 .p-login {
-  padding-top: 0.7rem;
+  padding-top: 0.9rem;
 }
 
 .input-search {
@@ -45,7 +45,7 @@ input {
 .fa-solid {
   position: absolute;
   font-size: 1.4rem;
-  margin-left: 2.4rem;
+  margin-left: 3rem;
   margin-top: 0.8rem;
   color: rgb(137, 145, 145);
 }
@@ -55,7 +55,7 @@ input {
 }
 
 .p-seller {
-  padding-top: 0.7rem;
+  padding-top: 0.9rem;
 }
 .seller button {
   font-size: 1.2rem;
@@ -70,22 +70,17 @@ input {
   cursor: pointer;
   display: none;
 }
-#checkbox {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  input {
+
+@media screen and (max-width: 425px) {
+  .menu-bar {
+    display: block;
+    padding-left: 2rem;
+  }
+  .form-control {
     display: none;
   }
   .fa-solid {
     display: none;
-  }
-
-  .menu-bar {
-    display: block;
-  }
-  #checkbox:checked ~ header {
-    left: 0;
   }
   .p-cart {
     display: none;
@@ -98,5 +93,41 @@ input {
   }
   .dots {
     display: none;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .menu-bar {
+    display: block;
+  }
+  .form-control {
+    display: none;
+  }
+  .fa-solid {
+    display: none;
+  }
+  .p-cart {
+    display: none;
+  }
+  .p-seller {
+    display: none;
+  }
+  .p-login {
+    display: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .p-cart {
+    display: none;
+  }
+  .p-seller {
+    display: none;
+  }
+  .p-login {
+    display: none;
+  }
+}
+@media screen and(min-width:1025px) {
+  .container {
+    width: auto;
   }
 }

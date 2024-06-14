@@ -1,1 +1,50 @@
-<p>product works!</p>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a><img style="width: 6.2rem;margin-top: 0.5rem;" src="../../../assets/Images/headphon.png" alt="">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="item"> <a><img style="width: 6.2rem;margin-top: 0.5rem;" src="../../../assets/Images/photo.png"
+                    alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a><img style="width: 6.2rem;margin-top: 0.5rem;" src="../../../assets/Images/photo1.png" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a><img style="width: 6.2rem;margin-top: 0.5rem;" src="../../../assets/Images/jwellery.png" alt="">
+                <h6>jwellery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-card">
+    <div class="container-slide">
+        <h4 class="head-prod1">Top Deals on Fashion</h4>
+        <div class="slider-wrapper">
+            <button class="slide-btn" id="prev-slide"><i class='fas fa-angle-left'></i></button>
+            <div class="card-cont">
+                <ng-container *ngFor="let item of productList">
+                    <div class="card">
+                        <img src="{{item.image}}" alt="">
+                        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                            {{item.title}}
+                        </h5>
+                        <p><strong>Price</strong>${{item.price}}</p>
+                    </div>
+                </ng-container>
+            </div>
+            <button class="slide-btn" id="next-slide"><i class='fas fa-angle-right'></i></button>
+
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
+    </div>
+</div>
