@@ -62,25 +62,32 @@
 
     </div>
 </div>
-<div class="container-card">
-    <div class="container-slide">
-        <h4 class="head-prod1">Top Deals on Fashion</h4>
-        <div class="slider-wrapper">
-            <button class="slide-btn" id="prev-slide"><i class='fas fa-angle-left'></i></button>
-            <div class="card-cont">
-                <ng-container *ngFor="let item of productList">
-                    <div class="card">
-                        <img src="{{item.image}}" alt="">
-                        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
-                            {{item.title}}
-                        </h5>
-                        <p><strong>Price</strong>${{item.price}}</p>
-                    </div>
-                </ng-container>
+<ng-container *ngIf="show">
+
+    <div class="container-card">
+        <div class="container-slide">
+            <h4 class="head-prod1">Top Deals on Fashion</h4>
+            <div class="slider-wrapper">
+                <button class="slide-btn" id="prev-slide"><i class='fas fa-angle-left'></i></button>
+                <div class="card-cont">
+                    <ng-container *ngFor="let item of productList">
+                        <div class="card">
+                            <img src="{{item.image}}" alt="">
+                            <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                                {{item.title}}
+                            </h5>
+                            <p><strong>Price</strong>${{item.price}}</p>
+                        </div>
+                    </ng-container>
+                </div>
+                <button class="slide-btn" id="next-slide" (click)="nextBtn()"><i
+                        class='fas fa-angle-right'></i></button>
+
             </div>
-            <button class="slide-btn" id="next-slide"><i class='fas fa-angle-right'></i></button>
 
         </div>
-
     </div>
-</div>
+</ng-container>
+<ng-container *ngIf="!show">
+    <app-product-child [productListItem]="productList"></app-product-child>
+</ng-container>

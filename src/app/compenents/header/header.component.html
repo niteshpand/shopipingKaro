@@ -17,10 +17,10 @@
             <button class="btn"><i class="far fa-user"></i></button>
             <p class="p-login">Login</p>
         </div>
-        <span class="cart">
+        <span class="cart" routerLink="cart">
             <button class="btn">
                 <i style="font-size: 1.2rem;" class="fas fa-cart-plus"></i>
-                <div style="font-size: 7px;" class="badge bg-danger">5</div>
+                <div style="font-size: 7px;" class="badge bg-danger">{{totalItem}}</div>
             </button>
             <p class="p-cart">Cart</p>
         </span>

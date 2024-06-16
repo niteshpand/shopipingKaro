@@ -7,6 +7,7 @@ import { HeaderComponent } from './compenents/header/header.component';
 import { CartComponent } from './compenents/cart/cart.component';
 import { ProductComponent } from './compenents/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductChildComponent } from './compenents/product/product-child/product-child.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     CartComponent,
     ProductComponent,
+    ProductChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
