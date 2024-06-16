@@ -1,13 +1,10 @@
 .card-top {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
+  display: grid;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 30px;
+  grid-template-columns: repeat(10, 1fr);
 }
 .item img {
   width: 64px;
@@ -19,6 +16,11 @@
 .item a:hover {
   color: blue;
 }
+
+.head-prod1 {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
 .slider-wrapper .card-cont {
   display: grid;
   gap: 18px;
@@ -27,27 +29,34 @@
   margin-bottom: 30px;
   grid-template-columns: repeat(20, 1fr);
 }
+.slider-wrapper {
+  position: relative;
+}
 
 .slider-wrapper .slide-btn {
   position: absolute;
   top: 50%;
-  height: 50px;
+  height: 80px;
   width: 50px;
-  color: #fff;
+  color: #000;
   border: none;
   outline: none;
-  background: #000;
-  font-size: 2.2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
-  border-radius: 50%;
   transform: translateY(-50%);
 }
 
+.slider-wrapper .slide-btn:hover {
+  background-color: rgb(70, 70, 69);
+  opacity: 0.5;
+  color: #fff;
+}
+
 .slider-wrapper .slide-btn#prev-slide {
-  left: -20px;
+  left: -50px;
 }
 .slider-wrapper .slide-btn#next-slide {
-  right: -20px;
+  right: -50px;
 }
 
 .slider-wrapper .card-cont::-webkit-scrollbar {
@@ -64,10 +73,12 @@
   margin-top: 50px;
 }
 .container-card {
+  margin-top: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f4fd;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .container-slide {
   max-width: 1300px;

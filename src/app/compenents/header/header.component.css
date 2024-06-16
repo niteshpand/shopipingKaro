@@ -16,16 +16,26 @@ input {
   color: transparent;
 }
 .cart {
+  color: #000;
+  text-decoration: none;
   display: flex;
-  font-size: 1.2rem;
-  /* color: white; */
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
+
 .p-cart {
-  padding-top: 0.7rem;
+  padding-top: 0.9rem;
 }
 .login {
+  color: #000;
+  text-decoration: none;
   display: flex;
-  /* color: aliceblue; */
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .p-login {
@@ -51,7 +61,13 @@ input {
 }
 
 .seller {
+  color: #000;
+  text-decoration: none;
   display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .p-seller {

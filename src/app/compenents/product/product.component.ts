@@ -13,31 +13,29 @@ export class ProductComponent {
   constructor(private productService: ProductService) {}
 
   ngOnInit() {
+    window.addEventListener('load', this.initslider);
     this.productService.getProduct().subscribe((res) => {
       this.productList = res;
     });
   }
+  initslider() {
+    const imageList = document.querySelector('.slider-wrapper .card-cont');
+    const slideButton = document.querySelectorAll('.slider-wrapper .slide-btn');
 
-  // showDivs(slideIndex:number){};
-
-  plusDivs(n: number) {
-    this.showDivs((this.slideIndex += n));
-  }
-
-  showDivs(n: number) {
-    let i;
-    const x = document.getElementsByClassName(
-      'card-cont'
-    ) as HTMLCollectionOf<HTMLElement>;
-    if (n > x.length) {
-      this.slideIndex = 1;
-    }
-    if (n < 1) {
-      this.slideIndex = x.length;
-    }
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
-    }
-    x[this.slideIndex - 1].style.display = 'block';
+    //Slide images according to the slide button clicks
+    slideButton.forEach((res) => {
+      res.addEventListener('click', () => {
+        const direction = res.id === 'prev-slide' ? -1 : 1;
+        if (imageList instanceof HTMLElement) {
+          const scrollAmount = imageList.clientWidth * direction;
+          if (imageList instanceof HTMLElement) {
+            imageList.scrollBy({
+              left: scrollAmount,
+              behavior: 'smooth',
+            });
+          }
+        }
+      });
+    });
   }
 }
