@@ -1,4 +1,5 @@
 .card-top {
+  padding-top: 6rem;
   display: grid;
   gap: 18px;
   overflow-x: auto;
@@ -77,6 +78,10 @@ p {
   height: 100px;
   margin-left: 50px;
   margin-top: 50px;
+  padding-bottom: 15px;
+}
+.slider-wrapper .card-cont .card img:hover {
+  transform: scale(1.1);
 }
 .container-card {
   margin-top: 2%;

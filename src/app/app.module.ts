@@ -8,6 +8,7 @@ import { CartComponent } from './compenents/cart/cart.component';
 import { ProductComponent } from './compenents/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductChildComponent } from './compenents/product/product-child/product-child.component';
+import { LoginComponent } from './compenents/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductChildComponent } from './compenents/product/product-child/produc
     CartComponent,
     ProductComponent,
     ProductChildComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
