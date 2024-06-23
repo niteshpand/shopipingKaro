@@ -1,0 +1,25 @@
+{
+  "signUp": [
+    {
+      "id": "1492",
+      "fullName": "test name",
+      "email": "test@gmail.com",
+      "password": "test1234",
+      "mobile": 98989965
+    },
+    {
+      "id": "4d32",
+      "fullName": "hello world",
+      "email": "world@gmail.com",
+      "password": "world1234",
+      "mobile": 1234567890
+    },
+    {
+      "id": "9b38",
+      "fullName": "drama",
+      "email": "drama@gmail.com",
+      "password": "drama1998",
+      "mobile": 9145768342
+    }
+  ]
+}

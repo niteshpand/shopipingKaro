@@ -19,6 +19,9 @@ input {
   margin-left: 2rem;
   color: transparent;
 }
+input:focus {
+  caret-color: transparent;
+}
 .cart {
   color: #000;
   text-decoration: none;

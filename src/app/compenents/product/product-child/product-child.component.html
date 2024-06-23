@@ -1,7 +1,7 @@
 <div class="container">
     <div class="container-alt">
         <div class="card-cont">
-            <ng-container *ngFor="let item of productListItem">
+            <ng-container *ngFor="let item of productListItem | filterPipe:searchKey:'title'">
                 <div class="card">
                     <img src="{{item.image}}" alt="">
                     <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">

@@ -7,10 +7,12 @@
                 alt="">
         </div>
         <div class="form-container">
-            <form>
-                <input type="email" placeholder="Enter Email / Mobile Number"><br>
+            <form [formGroup]="loginform" (ngSubmit)="submitLogin()">
+                <input type="email" placeholder="Enter Email / Mobile Number" formControlName="email"><br>
+                <input type="password" placeholder="Enter your Password" formControlName="password"><br>
                 <p>By continuing, you agree to Flipkart's</p>
-                <button>Request Otp</button>
+                <p>if you have not account then <a routerLink="/signup">signUp</a></p>
+                <button> Login</button>
             </form>
         </div>
     </div>

@@ -6,21 +6,22 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
   public cartItems: any = [];
-  public productList = new BehaviorSubject<any>([]);
+  public cartList = new BehaviorSubject<any>([]);
+  public search = new BehaviorSubject<string>('');
 
   constructor() {}
   getProduct() {
-    return this.productList.asObservable();
+    return this.cartList.asObservable();
   }
 
   setProduct(product: any) {
     this.cartItems.push(...product);
-    this.productList.next(product);
+    this.cartList.next(product);
   }
 
   addToCart(product: any) {
     this.cartItems.push(product);
-    this.productList.next(this.cartItems);
+    this.cartList.next(this.cartItems);
     this.getTotalPrice();
   }
 
@@ -41,6 +42,6 @@ export class CartService {
 
   removeAllCart() {
     this.cartItems = [];
-    this.productList.next(this.cartItems);
+    this.cartList.next(this.cartItems);
   }
 }

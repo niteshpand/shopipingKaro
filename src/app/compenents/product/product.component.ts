@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -7,11 +8,15 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  productList: any;
+  productList: any[] = [];
+  searchKey: string = '';
   slideIndex: number = 1;
   show: boolean = true;
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private cartService: CartService,
+    private productService: ProductService
+  ) {}
 
   ngOnInit() {
     window.addEventListener('load', this.initslider);
@@ -20,6 +25,9 @@ export class ProductComponent {
       this.productList.forEach((a: any) => {
         Object.assign(a, { quantity: 1, total: a.price });
       });
+    });
+    this.cartService.search.subscribe((val: any) => {
+      this.searchKey = val;
     });
   }
   nextBtn() {

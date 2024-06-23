@@ -7,8 +7,8 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./product-child.component.css'],
 })
 export class ProductChildComponent {
-  @Input() productListItem: any;
-
+  @Input() productListItem: any[] = [];
+  @Input() searchKey: string = '';
   constructor(private cartService: CartService) {}
 
   ngOnIt() {}

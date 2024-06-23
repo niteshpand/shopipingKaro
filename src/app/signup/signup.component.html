@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="login-container">
+        <div class="login-card">
+            <p style="font-size: 28px;font-weight: 500;">Sign Up</p>
+            <span>Get access to your Orders, Wishlist and Recommendations</span><br>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
+                alt="">
+        </div>
+        <div class="form-container">
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                <input type="text" placeholder="Full Name" formControlName="fullName"><br>
+                <input type="number" placeholder="Mobile Number" formControlName="mobile"><br>
+                <input type="email" placeholder="Create Email" formControlName="email"><br>
+                <input type="password" placeholder="Create your Password" formControlName="password"><br>
+                <p>By continuing, you agree to Flipkart's</p>
+                <p>if you have account then <a routerLink="/login">login</a></p>
+
+                <button> signUp</button>
+            </form>
+        </div>
+    </div>
+</div>
