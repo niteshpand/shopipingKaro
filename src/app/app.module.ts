@@ -11,7 +11,9 @@ import { ProductChildComponent } from './compenents/product/product-child/produc
 import { LoginComponent } from './compenents/login/login.component';
 import { FilterPipePipe } from './compenents/shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './compenents/signup/signup.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { SignupComponent } from './signup/signup.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent],

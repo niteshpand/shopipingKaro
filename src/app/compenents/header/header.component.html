@@ -14,18 +14,30 @@
             </div>
         </form>
 
-        <div class="login" routerLink="login">
-            <button class="btn"><i class="far fa-user"></i></button>
-            <p class="p-login">Login</p>
+        <div class="login">
+            <button class="btn" routerLink="login"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+                    alt=""></button>
+            <div class="dropdown-login" data-dropdown>
+                <button class="p-login" data-dropdown-button>Login</button>
+                <div class="dropdown-tog">
+                    <p class="information-grid">new customer? <a routerLink="/signup"> signUp</a></p>
+                    <p class="drop-cont">dropdown</p>
+                    <p class="drop-cont">content</p>
+                </div>
+            </div>
         </div>
         <span class="cart" routerLink="cart">
             <button class="btn">
-                <i style="font-size: 1.2rem;" class="fas fa-cart-plus"></i>
+                <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                    alt="">
                 <div style="font-size: 7px;" class="badge bg-danger">{{totalItem}}</div>
             </button>
             <p class="p-cart">Cart</p>
         </span>
-        <span class="seller"><button class=" btn"><i class='fas fa-store-alt'></i></button>
+        <span class="seller"><button class=" btn"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
+                    alt=""></button>
             <p class="p-seller">Become a
                 Seller</p>
         </span>

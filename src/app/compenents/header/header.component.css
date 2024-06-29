@@ -45,10 +45,6 @@ input:focus {
   text-align: center;
 }
 
-.p-login {
-  padding-top: 0.9rem;
-}
-
 .input-search {
   position: relative;
 }
@@ -93,6 +89,48 @@ input:focus {
   cursor: pointer;
   display: none;
 }
+.p-login {
+  background: none;
+  text-decoration: none;
+  color: #000;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+  border-left: #fff;
+  border-right: #fff;
+  border-top: #fff;
+  border-bottom: #fff;
+}
+
+.dropdown-login {
+  position: relative;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+.drop-cont {
+  margin-right: 0;
+}
+.dropdown-tog {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: #fff;
+  padding: 0.75rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-login.active > .p-login + .dropdown-tog {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media screen and (max-width: 425px) {
   .menu-bar {
@@ -134,9 +172,9 @@ input:focus {
   .p-seller {
     display: none;
   }
-  .p-login {
+  /* .p-login {
     display: none;
-  }
+  } */
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .p-cart {
@@ -145,9 +183,9 @@ input:focus {
   .p-seller {
     display: none;
   }
-  .p-login {
+  /* .p-login {
     display: none;
-  }
+  } */
 }
 @media screen and(min-width:1025px) {
   .container {

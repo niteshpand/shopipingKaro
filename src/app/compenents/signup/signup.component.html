@@ -7,15 +7,15 @@
                 alt="">
         </div>
         <div class="form-container">
-            <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
-                <input type="text" placeholder="Full Name" formControlName="fullName"><br>
-                <input type="number" placeholder="Mobile Number" formControlName="mobile"><br>
+            <form [formGroup]="signUpForm" (ngSubmit)="register()">
+                <!-- <input type="text" placeholder="Full Name" formControlName="fullName"><br> -->
+                <!-- <input type="number" placeholder="Mobile Number" formControlName="mobile"><br> -->
                 <input type="email" placeholder="Create Email" formControlName="email"><br>
                 <input type="password" placeholder="Create your Password" formControlName="password"><br>
                 <p>By continuing, you agree to Flipkart's</p>
-                <p>if you have account then <a routerLink="/login">login</a></p>
 
-                <button> signUp</button>
+                <button> signUp</button><br><br>
+                <p>if you have account then <a routerLink="/login">login</a></p>
             </form>
         </div>
     </div>
